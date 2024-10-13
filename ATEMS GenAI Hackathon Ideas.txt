@@ -1,0 +1,27 @@
+1) Video Summarization and Scene Generation
+Overview: Create a generative AI tool that summarizes long videos and generates corresponding scenes or animated representations.
+Focus: Use NIM to handle the large-scale inference of generative models that process both video and text data. Implement auto-scaling and load balancing for real-time performance.
+Tech Stack: PyTorch (video processing models), BERT, NIM microservices, Docker, TensorRT, cloud platforms for storage and scaling.
+
+(i)https://youtu.be/5eqkjdty20g?si=wxyrx7mz99EGrAfS
+(ii)https://youtu.be/HFfXvfFe9F8?si=cz_bfms8UgSzYZFZ
+
+2)Voice Cloning System for Custom Speech Generation
+Overview: Build a real-time voice cloning and synthesis system that allows users to generate personalized voices based on minimal input data.
+Focus: Leverage NIM microservices for efficient scaling of large-scale speech synthesis models and enable seamless real-time processing for voice generation.
+Tech Stack: GPT for speech generation, PyTorch, ONNX Runtime, TensorRT, Docker, Helm
+
+(i)https://youtu.be/vKoTxTt-KA0?si=fagZF3A5zzYIaqtu
+
+3)AI-Powered Personalized News Summarizer
+Overview: Create an AI-powered tool that summarizes news articles or content from various sources, personalizing the summaries based on user preferences.
+Focus: Use NIM to deploy and optimize inference for large language models that handle real-time content summarization and user-specific modifications (e.g., tone, length).
+Tech Stack: GPT, NIM microservices, Docker, Kubernetes, PyTorch, BERT, ONNX Runtime.
+Use Case: Personalized news apps, blog summarizers, or AI-driven news aggregators
+
+4)AI-Driven Interactive Storytelling Platform
+Overview: Develop a generative AI tool that allows users to engage with an interactive storytelling platform where AI adapts the story based on user choices.
+Focus: Use NIM to scale the inference of large language models that generate personalized story paths in real-time, allowing for seamless interaction without latency.
+Tech Stack: GPT, PyTorch, NIM microservices, ONNX Runtime, Docker, Kubernetes.
+Use Case: AI-powered gaming platforms, interactive ebooks, or storytelling apps.
+
