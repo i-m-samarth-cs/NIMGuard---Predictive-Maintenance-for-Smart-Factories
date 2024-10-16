@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predictive Maintenance & Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f8f8f8;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        input[type="text"], textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"], button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover, button:hover {
+            background-color: #45a049;
+        }
+        .results, .chat-section {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .chat-section textarea {
+            height: 100px;
+        }
+        .chat-section .response {
+            margin-top: 15px;
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Predictive Maintenance Input</h1>
+    <form method="POST">
+        <label for="air_temp">Air temperature [K]:</label>
+        <input type="text" id="air_temp" name="air_temp" required placeholder="Enter air temperature in Kelvin" pattern="^[0-9]+(\.[0-9]+)?$" title="Please enter a valid number.">
+
+        <label for="process_temp">Process temperature [K]:</label>
+        <input type="text" id="process_temp" name="process_temp" required placeholder="Enter process temperature in Kelvin" pattern="^[0-9]+(\.[0-9]+)?$" title="Please enter a valid number.">
+
+        <label for="rotational_speed">Rotational speed [rpm]:</label>
+        <input type="text" id="rotational_speed" name="rotational_speed" required placeholder="Enter rotational speed in rpm" pattern="^[0-9]+(\.[0-9]+)?$" title="Please enter a valid number.">
+
+        <label for="torque">Torque [Nm]:</label>
+        <input type="text" id="torque" name="torque" required placeholder="Enter torque in Nm" pattern="^[0-9]+(\.[0-9]+)?$" title="Please enter a valid number.">
+
+        <label for="tool_wear">Tool wear [min]:</label>
+        <input type="text" id="tool_wear" name="tool_wear" required placeholder="Enter tool wear in minutes" pattern="^[0-9]+(\.[0-9]+)?$" title="Please enter a valid number.">
+
+        <label for="type">Type:</label>
+        <input type="text" id="type" name="type" required placeholder="Enter type (e.g., L, M, H)" title="Please enter a valid type.">
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if target is not none %}
+        <div class="results">
+            <h2>Prediction Results:</h2>
+            <p><strong>Predicted Target:</strong> {{ target }}</p>
+            <p><strong>Predicted Failure Type:</strong> {{ failure }}</p>
+        </div>
+    {% endif %}
+
+</body>
+</html>
